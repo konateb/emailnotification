@@ -1,7 +1,6 @@
 //index.js
 import productEmitter from "./sendEventNotification.js";
 import * as readline from "readline";
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -17,6 +16,7 @@ rl.question("Nom du produit: ", (name) => {
     console.log("L'objet produit :", newProduct);
     rl.close();
     // emettre evenement d'ajout du produit
-    productEmitter.emit("newProductAdded", newProduct);
+     productEmitter.emit("newProductAdded", newProduct);
   });
 });
+
