@@ -27,6 +27,7 @@ async function sendEmailNotification(product) {
     };
 
     const result = await transporter.sendMail(mailOptions);
+    // console.log("E-mail envoyé" , result);
     console.log("E-mail envoyé avec succès !");
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'e-mail :", error);
